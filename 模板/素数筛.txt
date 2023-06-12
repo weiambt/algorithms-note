@@ -1,0 +1,44 @@
+//1.朴素埃氏筛法
+void get_primes(int n){
+    for(int i=2;i<=n;i++){
+        if(st[i]==0){
+            primes[cnt++]=i;
+            for(int j=i+i;j<=n;j+=i)
+                st[j]=1;
+        }
+    }
+    //求素数个数
+    cnt	
+}
+
+
+//2.优化的埃氏筛法求n以内的所有素数（O（nloglogn））
+void getPrimes(int n){
+    for(int i=2;i<=n/i;i++){//根号n次
+        if(st[i]==0){
+            for(int j=i*i;j<=n;j+=i)//i*i开始
+                st[j]=1;
+        }
+    }
+    //求素数个数
+    for(int i=2;i<=n;i++) 
+        if(st[i]==0) ans++;
+        
+    //求每一个素数
+    // for(int i=2;i<=n;i++)
+    //     if(st[i]==0) primes[cnt++]=i;
+}
+
+//3.线性筛（性能最好）
+void get_primes(int n)
+{
+    for (int i = 2; i <= n; i ++ )
+    {
+        if (!st[i]) primes[cnt ++ ] = i;
+        for (int j = 0; primes[j] <= n / i; j ++ )
+        {
+            st[primes[j] * i] = true;
+            if (i % primes[j] == 0) break;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+
+public class Test{
+    static int N = 2000;
+//    public static void main(String[] args) {
+//        long start = System.currentTimeMillis();
+//        for(int i=0;i<N*N;i++){
+//            System.out.print("1");
+//            if(i%N==0) 
+//                System.out.print("\n");
+//        }
+//        System.out.println("");
+//        long end = System.currentTimeMillis();
+//        System.out.println(end-start);
+//    }
+    public static void main(String[] args) {
+        long start = System.currentTimeMillis();
+        for(int i=0;i<N*N;i++){
+            if(i%N!=0)
+                System.out.print("1");
+            else
+                System.out.println("");
+        }
+        System.out.println("");
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+    }
+    
+    
+    //1e5  println   yao   1.2s
+    //1e6  println   yao   12s
+    
+    //1e5  print     yao    0.1s
+    //1e6  print     yao    1s
+    
+    
+    //1e6  print  + 1e3  println  yao     1.3s
+    //1500^2 print + 1500 println  yao    2.2s
+    //1700^2 print + 1700 println  yao    3s
+    //1800^2 print + 1800 println  yao    3.3s
+    //2000^2 print + 2000  println  yao   4.1s
+}

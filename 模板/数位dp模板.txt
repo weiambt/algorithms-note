@@ -1,0 +1,29 @@
+题目形式：找一个区间内满足某个性质的数的个数，数据范围会开到10^10
+数位dp思路：计算0~n中满足条件的个数
+答案：count(b)-count(a-1)
+难点：左子树计算公式
+
+static int count(int n){
+        if(n==0) return 1;//判断0是否满足条件，如果满足一定要返回1
+        ArrayList<Integer> nums = new ArrayList<>();
+        while(n>0){
+            nums.add(n%10);
+            n/=10;
+        }
+        n = nums.size();
+        int res = 0;
+        int last = 0;//存放上一时刻的状态，可以是上一位的值，也可以是前面的和
+        for (int i = n-1; i >= 0; i--) {
+            int x = nums.get(i);
+            //左子树计算公式
+            for (int j = 0; j < x; j++) {
+
+
+            }
+            //右子树一直递归
+
+             // 右子树的终点可能会多一种方案
+             if(i==0 && ) res++;
+        }
+        return res;
+    }
