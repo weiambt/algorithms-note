@@ -4,7 +4,7 @@
 
 - 设置任意字母提示，并设置间隔1s
 - 设置返回值快捷键alt +enter
-- 字体大小
+- 字体大小 18号
 
 
 
@@ -18,9 +18,9 @@
 
 ### 生成返回值
 
-搜索Ctrl + 2 L 找到生成返回值的选项，将快捷键改成alt + enter
+搜索quick assist - assign local variable，将快捷键改成alt + enter
 
-![image-20221112205129655](img/image-20221112205129655.png)
+![image-20240530212902453](images/image-20240530212902453.png)
 
 这里的alt+enter会被properties的快捷键干扰，所以把其他设置成alt+enter的命令取消掉，下图中，就将properties的快捷键修改成其他的了
 
