@@ -1,0 +1,18 @@
+所以，是环境配置有问题，我们可以检查以下三处地方：
+
+第一、”JAVA_HOME”
+
+JAVA_HOME的内容是jdk安装目录。如小编安装的位置：D：\Program Files （x86）\Java\jdk1.7.0_60，并且后边不带分号；
+
+第二、检查CLASSPATH，
+
+这是一个jar包的调用。.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar；（前面有点号和分号，后边结尾也有分号。）或者可以写成“.;%JAVA_HOME%\lib;”如图所示，一样的效果；
+
+第三、检查“PATH“变量是否正确
+
+PATH变量很简单，就是jdk的bin目录的意思。%JAVA_HOME%\bin;
+————————————————
+
+                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+                        
+原文链接：https://blog.csdn.net/Ghjkku/article/details/127302552
