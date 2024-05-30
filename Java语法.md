@@ -556,7 +556,64 @@ min(a,b): a.min(b)
 
 
 
+### 字符串字典序
+
+java默认是字符串字典序升序的
+
+用lambda自定义排序，对于字符串的排序规则不能用减法表示，而要用compareTo方法
+
+升序写成a.name.compareTo(b.name)
+
+
+
+```
+//不能写成 a.name - b.name
+(a,b)->(a.point!=b.point ? b.point-a.point : a.name.compareTo(b.name)))
+
+class PII{
+    int point;
+    String name;
+    PII(int point,String name){
+        this.point = point;
+        this.name = name;
+    }
+}
+```
+
+
+
+
+
 # 三、集合容器
+
+### computeIfAbsent()
+
+computeIfAbsent() 方法对 hashMap 中指定 key 的值进行重新计算，如果不存在这个 key，则添加到 hashMap 中。
+
+相当于getOrDefault，只不过区别是computeIfAbsent会直接操作原来的map的值，而getOrDefault不影响map
+
+```
+        HashMap<String, Integer> prices = new HashMap<>();
+
+        // 计算 Shirt 的值
+        int shirtPrice = prices.computeIfAbsent("Shirt", key -> 280);
+        
+        System.out.println("Updated HashMap: " + prices);
+        // Updated HashMap: {Shirt=280}
+```
+
+一般这么用
+
+```
+	Map<Integer, Queue<Integer>> ms = new HashMap<>();
+    
+    ms.computeIfAbsent(number, k -> new PriorityQueue<>()).offer(index);
+
+```
+
+
+
+
 
 ## Map
 
